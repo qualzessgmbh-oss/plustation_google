@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plustation GmbH</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Manrope:wght@200;300;400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#C8A165", 
+              "primary-hover": "#b08d55",
+              "background-dark": "#0A0A0A",
+              "surface-dark": "#121212",
+              "surface-card": "#1c1c1c",
+              "muted-gold": "#9A815C",
+            },
+            fontFamily: {
+              display: ["Cinzel", "serif"],
+              serif: ["Playfair Display", "serif"],
+              sans: ["Manrope", "sans-serif"],
+            },
+            backgroundImage: {
+               'stone-texture': "url('https://www.transparenttextures.com/patterns/dark-matter.png')",
+            }
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0A0A0A; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #C8A165; 
+      }
+      .gold-glow {
+        text-shadow: 0 0 20px rgba(200, 161, 101, 0.3);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.10.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+</head>
+  <body class="bg-background-dark text-gray-200 font-sans antialiased">
+    <div id="root"></div>
+  </body>
+</html>
