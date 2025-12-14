@@ -4,6 +4,7 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import Contact from './pages/Contact';
+import Logistics from './pages/Logistics';
 import { LanguageProvider } from './contexts/LanguageContext';
 
 // Scroll to top on route change
@@ -25,6 +26,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
+            <Route path="logistics" element={<Logistics />} />
             <Route path="products" element={<Products />} />
             <Route path="contact" element={<Contact />} />
           </Route>

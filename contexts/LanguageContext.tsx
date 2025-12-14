@@ -85,6 +85,25 @@ const translations = {
         lighting: "Lighting Accents"
       }
     },
+    logistics: {
+      heroTitle: "Global Logistics Network",
+      heroSubtitle: "Precision supply chain management designed for high-value architectural surfaces and industrial goods.",
+      capabilitiesTitle: "Operational Capabilities",
+      warehousingTitle: "Premium Warehousing",
+      warehousingDesc: "20,000+ sqm of secure, climate-controlled storage in Gelsenkirchen. Specialized racking for oversized slabs and delicate veneers.",
+      transportTitle: "Multimodal Transport",
+      transportDesc: "Integrated sea, rail, and road freight solutions connecting Asia manufacturing hubs with European markets.",
+      customsTitle: "Customs Clearance",
+      customsDesc: "Full-service customs brokerage handling complex import regulations, duties, and fiscal representation.",
+      distributionTitle: "Site Delivery",
+      distributionDesc: "Just-in-time delivery coordination directly to construction sites, minimizing on-site storage risks.",
+      statsTitle: "Performance by the Numbers",
+      stat1Label: "Containers / Year",
+      stat2Label: "Storage Capacity",
+      stat3Label: "On-Time Delivery",
+      ctaTitle: "Ready to optimize your supply chain?",
+      ctaButton: "Get a Quote"
+    },
     contact: {
       getInTouch: "Get in Touch",
       titlePrefix: "Let's build something",
@@ -182,6 +201,25 @@ const translations = {
         hardware: "Beschläge",
         lighting: "Lichtakzente"
       }
+    },
+    logistics: {
+      heroTitle: "Globales Logistiknetzwerk",
+      heroSubtitle: "Präzises Supply-Chain-Management für hochwertige Architekturoberflächen und Industriegüter.",
+      capabilitiesTitle: "Operative Fähigkeiten",
+      warehousingTitle: "Premium Lagerung",
+      warehousingDesc: "Über 20.000 m² sichere, klimatisierte Lagerfläche in Gelsenkirchen. Spezialregale für übergroße Platten und empfindliche Furniere.",
+      transportTitle: "Multimodaler Transport",
+      transportDesc: "Integrierte See-, Bahn- und Straßenfrachtlösungen, die asiatische Fertigungszentren mit europäischen Märkten verbinden.",
+      customsTitle: "Zollabfertigung",
+      customsDesc: "Full-Service-Zollabwicklung für komplexe Importvorschriften, Zölle und fiskalische Vertretung.",
+      distributionTitle: "Baustellenlieferung",
+      distributionDesc: "Just-in-Time-Lieferkoordination direkt zur Baustelle zur Minimierung von Lagerrisiken vor Ort.",
+      statsTitle: "Leistung in Zahlen",
+      stat1Label: "Container / Jahr",
+      stat2Label: "Lagerkapazität",
+      stat3Label: "Pünktliche Lieferung",
+      ctaTitle: "Bereit, Ihre Lieferkette zu optimieren?",
+      ctaButton: "Angebot anfordern"
     },
     contact: {
       getInTouch: "Kontakt aufnehmen",
