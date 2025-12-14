@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Warehouse, Truck, Ruler, ShieldCheck } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Home: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <>
       {/* Hero Section */}
@@ -20,29 +23,29 @@ const Home: React.FC = () => {
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-20">
           <div className="lg:col-span-5 space-y-8">
             <div className="inline-flex items-center gap-3 border-l-2 border-primary pl-4">
-              <span className="text-primary tracking-[0.2em] text-sm font-semibold uppercase">Est. Germany</span>
+              <span className="text-primary tracking-[0.2em] text-sm font-semibold uppercase">{t('home.est')}</span>
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-display text-white leading-tight">
-              Premium <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-muted-gold gold-glow">Logistics &</span> <br />
-              Surfaces
+              {t('home.heroTitlePrefix')} <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-muted-gold gold-glow">{t('home.heroTitleMiddle')}</span> <br />
+              {t('home.heroTitleSuffix')}
             </h1>
             <p className="text-gray-400 text-lg md:text-xl font-light max-w-md leading-relaxed border-l border-gray-800 pl-6">
-              Redefining industrial elegance. We bridge the gap between heavy logistics and exquisite architectural finishes.
+              {t('home.heroSubtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-6 pt-8">
               <Link
                 to="/products"
                 className="group relative px-8 py-4 bg-primary text-background-dark font-bold tracking-widest uppercase text-sm overflow-hidden flex items-center justify-center"
               >
-                <span className="relative z-10 group-hover:text-white transition-colors duration-300">View Collection</span>
+                <span className="relative z-10 group-hover:text-white transition-colors duration-300">{t('home.viewCollection')}</span>
                 <div className="absolute inset-0 h-full w-full scale-0 bg-black/90 rounded transition-all duration-300 group-hover:scale-100"></div>
               </Link>
               <Link
                 to="#services"
                 className="group flex items-center justify-center sm:justify-start gap-3 text-white px-4 py-4 uppercase text-sm tracking-widest hover:text-primary transition-colors"
               >
-                <span>Our Services</span>
+                <span>{t('home.servicesBtn')}</span>
                 <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -58,16 +61,16 @@ const Home: React.FC = () => {
                 className="w-full h-full object-cover shadow-2xl brightness-90 contrast-110 relative z-10 grayscale-[20%]"
               />
               <div className="absolute -left-12 bottom-20 bg-surface-dark/90 backdrop-blur border border-gray-800 p-6 max-w-xs z-20 hidden md:block shadow-xl">
-                <p className="text-primary font-display text-xs tracking-widest mb-2">FEATURED PRODUCT</p>
+                <p className="text-primary font-display text-xs tracking-widest mb-2">{t('home.featuredProduct')}</p>
                 <h3 className="text-white text-xl font-display mb-1">Zhuohua Series</h3>
-                <p className="text-gray-400 text-xs leading-relaxed">Black walnut technology wood veneer composite with brushed copper inlays.</p>
+                <p className="text-gray-400 text-xs leading-relaxed">{t('home.featuredDesc')}</p>
               </div>
             </div>
           </div>
         </div>
 
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-20">
-          <span className="text-[10px] text-gray-500 uppercase tracking-widest">Scroll</span>
+          <span className="text-[10px] text-gray-500 uppercase tracking-widest">{t('home.scroll')}</span>
           <div className="w-[1px] h-12 bg-gradient-to-b from-primary to-transparent"></div>
         </div>
       </div>
@@ -76,8 +79,8 @@ const Home: React.FC = () => {
       <section id="collection" className="py-24 bg-surface-dark relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-primary text-sm font-bold tracking-[0.3em] uppercase block mb-3">Architectural Elements</span>
-            <h2 className="text-3xl md:text-4xl font-display text-white uppercase tracking-wide">The Ink Art Collection</h2>
+            <span className="text-primary text-sm font-bold tracking-[0.3em] uppercase block mb-3">{t('home.archElements')}</span>
+            <h2 className="text-3xl md:text-4xl font-display text-white uppercase tracking-wide">{t('home.collectionTitle')}</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -92,7 +95,7 @@ const Home: React.FC = () => {
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500"></div>
                 <div className="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                   <span className="text-primary text-xs tracking-widest font-bold uppercase mb-2 block opacity-0 group-hover:opacity-100 transition-opacity delay-100">Wei Mar Series</span>
-                  <h3 className="text-white font-display text-2xl border-l-2 border-primary pl-4">Entry Doors</h3>
+                  <h3 className="text-white font-display text-2xl border-l-2 border-primary pl-4">{t('home.entryDoors')}</h3>
                 </div>
               </div>
             </Link>
@@ -108,7 +111,7 @@ const Home: React.FC = () => {
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500"></div>
                 <div className="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                   <span className="text-primary text-xs tracking-widest font-bold uppercase mb-2 block opacity-0 group-hover:opacity-100 transition-opacity delay-100">Yanshi / Rock</span>
-                  <h3 className="text-white font-display text-2xl border-l-2 border-primary pl-4">Internal Surfaces</h3>
+                  <h3 className="text-white font-display text-2xl border-l-2 border-primary pl-4">{t('home.internalSurfaces')}</h3>
                 </div>
               </div>
             </Link>
@@ -124,7 +127,7 @@ const Home: React.FC = () => {
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500"></div>
                 <div className="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                   <span className="text-primary text-xs tracking-widest font-bold uppercase mb-2 block opacity-0 group-hover:opacity-100 transition-opacity delay-100">Bryce D Series</span>
-                  <h3 className="text-white font-display text-2xl border-l-2 border-primary pl-4">Flooring</h3>
+                  <h3 className="text-white font-display text-2xl border-l-2 border-primary pl-4">{t('home.flooring')}</h3>
                 </div>
               </div>
             </Link>
@@ -148,50 +151,50 @@ const Home: React.FC = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-surface-card p-8 border border-gray-800 hover:border-primary/50 transition-colors duration-300 group">
                   <Warehouse className="w-10 h-10 text-gray-400 group-hover:text-primary mb-4 transition-colors" />
-                  <h4 className="text-lg font-display font-bold text-white mb-2">Warehousing</h4>
-                  <p className="text-sm text-gray-400 leading-relaxed">Secure, climate-controlled storage solutions for sensitive materials.</p>
+                  <h4 className="text-lg font-display font-bold text-white mb-2">{t('home.warehousing')}</h4>
+                  <p className="text-sm text-gray-400 leading-relaxed">{t('home.warehousingDesc')}</p>
                 </div>
                 <div className="bg-surface-card p-8 border border-gray-800 hover:border-primary/50 transition-colors duration-300 group translate-y-8">
                   <Truck className="w-10 h-10 text-gray-400 group-hover:text-primary mb-4 transition-colors" />
-                  <h4 className="text-lg font-display font-bold text-white mb-2">Transshipment</h4>
-                  <p className="text-sm text-gray-400 leading-relaxed">Efficient European hub logistics and distribution management.</p>
+                  <h4 className="text-lg font-display font-bold text-white mb-2">{t('home.transshipment')}</h4>
+                  <p className="text-sm text-gray-400 leading-relaxed">{t('home.transshipmentDesc')}</p>
                 </div>
                 <div className="bg-surface-card p-8 border border-gray-800 hover:border-primary/50 transition-colors duration-300 group">
                   <Ruler className="w-10 h-10 text-gray-400 group-hover:text-primary mb-4 transition-colors" />
-                  <h4 className="text-lg font-display font-bold text-white mb-2">Consulting</h4>
-                  <p className="text-sm text-gray-400 leading-relaxed">Expert advice on material selection and architectural integration.</p>
+                  <h4 className="text-lg font-display font-bold text-white mb-2">{t('home.consulting')}</h4>
+                  <p className="text-sm text-gray-400 leading-relaxed">{t('home.consultingDesc')}</p>
                 </div>
                 <div className="bg-surface-card p-8 border border-gray-800 hover:border-primary/50 transition-colors duration-300 group translate-y-8">
                   <ShieldCheck className="w-10 h-10 text-gray-400 group-hover:text-primary mb-4 transition-colors" />
-                  <h4 className="text-lg font-display font-bold text-white mb-2">Quality Control</h4>
-                  <p className="text-sm text-gray-400 leading-relaxed">Rigorous inspection standards for all incoming and outgoing goods.</p>
+                  <h4 className="text-lg font-display font-bold text-white mb-2">{t('home.qualityControl')}</h4>
+                  <p className="text-sm text-gray-400 leading-relaxed">{t('home.qualityControlDesc')}</p>
                 </div>
               </div>
             </div>
 
             {/* Services Text */}
             <div className="order-1 lg:order-2">
-              <span className="text-primary text-sm font-bold tracking-[0.3em] uppercase block mb-3">Core Competencies</span>
-              <h2 className="text-4xl md:text-5xl font-display text-white leading-tight mb-6">Precision in <br />Every Movement</h2>
+              <span className="text-primary text-sm font-bold tracking-[0.3em] uppercase block mb-3">{t('home.competencies')}</span>
+              <h2 className="text-4xl md:text-5xl font-display text-white leading-tight mb-6">{t('home.servicesTitlePrefix')} <br />{t('home.servicesTitleSuffix')}</h2>
               <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                Plustation GmbH operates at the intersection of luxury goods and industrial logistics. We understand that high-value architectural surfaces require more than just transport—they demand stewardship.
+                {t('home.servicesText')}
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-center text-gray-400">
                   <span className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></span>
-                  Specialized Handling for Large Formats
+                  {t('home.handling')}
                 </li>
                 <li className="flex items-center text-gray-400">
                   <span className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></span>
-                  Just-in-Time Delivery for Construction Sites
+                  {t('home.jit')}
                 </li>
                 <li className="flex items-center text-gray-400">
                   <span className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></span>
-                  Global Sourcing Network
+                  {t('home.global')}
                 </li>
               </ul>
               <Link to="/contact" className="inline-block border-b border-primary text-white pb-1 hover:text-primary transition-colors uppercase text-sm tracking-widest font-semibold">
-                Explore Logistics Solutions
+                {t('home.exploreLogistics')}
               </Link>
             </div>
           </div>
@@ -205,7 +208,7 @@ const Home: React.FC = () => {
         </div>
         <div className="relative z-10 text-center max-w-4xl px-4">
           <p className="font-display text-2xl md:text-4xl text-gray-300 leading-normal">
-            "The door is not merely an entrance, but the first chapter of a home's story. We craft the opening lines."
+            {t('home.quote')}
           </p>
           <div className="mt-8 flex justify-center">
             <img
