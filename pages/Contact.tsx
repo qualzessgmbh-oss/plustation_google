@@ -129,17 +129,20 @@ const Contact: React.FC = () => {
 
       {/* Right Side: Map */}
       <div className="w-full lg:w-1/2 relative bg-surface-dark min-h-[500px] lg:min-h-auto">
-        <div className="absolute inset-0 overflow-hidden">
-          <img
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAO77t48RTq0T-BY-u6IXqv92D10bvqgMjolZak4XKqJKW6kYjassitJzj_WVjU1cNqH8agK2e6B76tzlwdJ7lXLfMnpR_eKZQpqNTJyGhlnz5XHjAmQ_TxQxNni44ywU6BEApA_xV_6ZbI0SZscN9FXJRF_Bht4maY12wLmXriwTC4_b3h100kAv10Kz3oFNnEpslN_9zKgUSD-NRCdkRX4oTTu1edoMoM0HpcDu6_fqONdIKFmF3iUeY_5oNxP6TnMKWNQcO7ZrO"
-            alt="Dark stylized map background"
-            className="w-full h-full object-cover filter grayscale contrast-125 brightness-50 opacity-60"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-80 lg:bg-gradient-to-l"></div>
+        <div className="absolute inset-0 overflow-hidden group">
+          <iframe 
+            width="100%" 
+            height="100%" 
+            frameBorder="0" 
+            title="Gelsenkirchen Location"
+            className="w-full h-full filter grayscale invert contrast-[0.85] opacity-80 hover:filter-none hover:opacity-100 transition-all duration-700"
+            src="https://maps.google.com/maps?width=100%25&height=600&hl=en&q=Hauptstra%C3%9Fe%20123%2C%2045879%20Gelsenkirchen&t=&z=14&ie=UTF8&iwloc=B&output=embed"
+          ></iframe>
+          <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-80 lg:bg-gradient-to-l pointer-events-none"></div>
         </div>
 
-        <div className="absolute bottom-12 left-8 right-8 lg:left-16 lg:right-auto lg:max-w-md">
-          <div className="bg-black/80 backdrop-blur-sm border border-gray-800 p-8 shadow-2xl rounded-sm">
+        <div className="absolute bottom-12 left-8 right-8 lg:left-16 lg:right-auto lg:max-w-md pointer-events-none">
+          <div className="bg-black/80 backdrop-blur-sm border border-gray-800 p-8 shadow-2xl rounded-sm pointer-events-auto">
             <div className="flex items-start justify-between mb-6">
               <div>
                 <h3 className="font-display text-xl text-white">{t('contact.headquarters')}</h3>
